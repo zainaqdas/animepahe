@@ -14,6 +14,8 @@ RUN apt-get update && apt-get install -y \
 
 # Clone animepahe-dl library
 RUN git clone https://github.com/ayushjaipuriyar/animepahe-dl /app/animepahe-dl
+# Ensure base URL is set to animepahe.pw
+RUN sed -i 's|https://animepahe.si|https://animepahe.pw|g' /app/animepahe-dl/anime_downloader/utils/constants.py
 
 # Copy requirements first for better caching
 COPY backend/requirements.txt .
