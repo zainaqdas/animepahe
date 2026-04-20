@@ -1,0 +1,23 @@
+fastapi==0.115.0
+uvicorn[standard]==0.32.0
+python-multipart==0.0.17
+pydantic==2.9.2
+pydantic-settings==2.6.1
+cryptography==43.0.3
+aiofiles==24.1.0
+httpx==0.27.2
+requests>=2.31.0
+
+# AnimePahe Downloader dependencies (from the library)
+beautifulsoup4>=4.14.3
+pycryptodome>=3.19.0
+tqdm>=4.66.0
+urllib3>=2.6.1
+platformdirs>=4.0.0
+loguru>=0.7.0
+rich>=13.0.0
+typer>=0.9.0
+pyfzf>=0.3.0
+questionary>=2.0.0
+plyer>=2.1.0
+PyQt6>=6.6.0
