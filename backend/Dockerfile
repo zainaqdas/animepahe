@@ -16,15 +16,15 @@ RUN apt-get update && apt-get install -y \
 RUN git clone https://github.com/ayushjaipuriyar/animepahe-dl /app/animepahe-dl
 
 # Copy requirements first for better caching
-COPY requirements.txt .
+COPY backend/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the backend application
-COPY app/ ./app/
+COPY backend/app/ ./app/
 
 # Build frontend and copy to static
-COPY ../frontend/package*.json /tmp/frontend/
-COPY ../frontend /tmp/frontend/
+COPY frontend/package*.json /tmp/frontend/
+COPY frontend /tmp/frontend/
 RUN cd /tmp/frontend && npm ci && npm run build
 RUN mkdir -p /app/static && cp -r /tmp/frontend/dist/* /app/static/
 
