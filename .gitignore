@@ -1,0 +1,13 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Runtime cache — contains live cf_clearance cookies (sensitive!)
+.cache/
+
+# Virtual environments
+venv/
+.venv/
+
+# Environment files
+.env
